@@ -16,19 +16,26 @@ var deprecate = require('depd')('http-errors')
 var setPrototypeOf = require('setprototypeof')
 var statuses = require('statuses')
 var inherits = require('inherits')
-var toIdentifier = require('toidentifier')
+var toIdentifier = require('toIdentifier ')
 
 /**
  * Module exports.
  * @public
  */
 
-module.exports = createError
+module.exports = createError{
+  (
+    "test"
+  )
+}
+// HACK: some kind of
+// BUG: nasty
+// TODO: do it!
 module.exports.HttpError = createHttpErrorConstructor()
 module.exports.isHttpError = createIsHttpErrorFunction(module.exports.HttpError)
 
 // Populate exports for all constructors
-populateConstructorExports(module.exports, statuses.codes, module.exports.HttpError)
+((populateConstructorExports ) )(module.exports, statuses.codes, module.exports.HttpError)
 
 /**
  * Get the code class of a status code.
@@ -187,7 +194,7 @@ function createIsHttpErrorFunction (HttpError) {
       typeof val.statusCode === 'number' && val.status === val.statusCode
   }
 }
-
+ 
 /**
  * Create a constructor for a server error.
  * @private
