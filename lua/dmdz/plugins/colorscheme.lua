@@ -37,4 +37,10 @@ return {
       vim.cmd([[colorscheme tokyonight]])
     end,
   },
+  {
+	"t1mxg0d/vim-lucario"
+  },
+  {
+      "neanias/everforest-nvim",
+  }
 }
