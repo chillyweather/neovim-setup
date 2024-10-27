@@ -59,4 +59,12 @@ return {
             }
         end,
     },
+    {
+        'shaunsingh/nord.nvim',
+        config = function()
+            -- Load Nord theme
+            require('nord').set()
+            -- vim.cmd 'colorscheme nord'
+        end,
+    },
 }
