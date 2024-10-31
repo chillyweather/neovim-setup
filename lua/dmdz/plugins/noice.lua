@@ -19,6 +19,12 @@ return {
                     inc_rename = false, -- disable if using inc-rename.nvim
                     lsp_doc_border = true, -- add border to LSP hover docs and signature help
                 },
+                messages = {
+                    enabled = false,
+                },
+                notify = {
+                    enabled = false,
+                },
             }
         end,
         dependencies = {

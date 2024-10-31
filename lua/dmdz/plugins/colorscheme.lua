@@ -24,22 +24,30 @@ return {
         'gregsexton/Atom',
         config = function()
             -- Apply the Lucario colorscheme
-            -- vim.cmd.colorscheme 'atom'
+            vim.cmd.colorscheme 'atom'
         end,
     },
     {
-        'dmcgrady/vim-lucario',
+        'EdenEast/nightfox.nvim',
+        config = function()
+            require('nightfox').setup {
+                groups = {
+                    all = {
+                        String = { style = 'italic' },
+                    },
+                },
+            }
+
+            -- Apply the colorscheme
+            vim.cmd.colorscheme 'nightfox'
+        end,
+    },
+    {
+        'raphamorim/lucario',
         config = function()
             -- Apply the Lucario colorscheme
-            vim.cmd.colorscheme 'lucario'
+            -- vim.cmd.colorscheme 'lucario'
         end,
-    },
-    {
-        'ajmwagar/vim-deus',
-        config = function()
-            -- vim.cmd.colorscheme 'deus'
-        end,
-        opts = {},
     },
     {
         'folke/tokyonight.nvim',
@@ -65,6 +73,17 @@ return {
             -- Load Nord theme
             require('nord').set()
             -- vim.cmd 'colorscheme nord'
+        end,
+    },
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine', -- Optional name to avoid using a full path
+        config = function()
+            require('rose-pine').setup {
+                variant = 'moon', -- Options: "main", "moon", "dawn"
+                dark_variant = 'moon', -- Variant to use in dark mode
+            }
+            -- vim.cmd("colorscheme rose-pine")
         end,
     },
 }
