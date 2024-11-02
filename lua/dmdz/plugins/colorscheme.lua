@@ -1,17 +1,6 @@
 -- colorscheme.lua
 return {
     {
-        'neanias/everforest-nvim',
-        version = false,
-        lazy = false,
-        priority = 1000, -- Make sure to load this before all other start plugins
-        config = function()
-            --vim.cmd 'colorscheme everforest'
-
-            vim.g.everforest_background = 'hard'
-        end,
-    },
-    {
         'projekt0n/github-nvim-theme',
         name = 'github-theme',
         config = function()
@@ -21,25 +10,15 @@ return {
         end,
     },
     {
+        'chillyweather/atomic-cs',
+        name = 'chilly weather',
+        config = function() end,
+    },
+    {
         'gregsexton/Atom',
         config = function()
             -- Apply the Lucario colorscheme
             vim.cmd.colorscheme 'atom'
-        end,
-    },
-    {
-        'EdenEast/nightfox.nvim',
-        config = function()
-            require('nightfox').setup {
-                groups = {
-                    all = {
-                        String = { style = 'italic' },
-                    },
-                },
-            }
-
-            -- Apply the colorscheme
-            vim.cmd.colorscheme 'nightfox'
         end,
     },
     {
@@ -73,17 +52,6 @@ return {
             -- Load Nord theme
             require('nord').set()
             -- vim.cmd 'colorscheme nord'
-        end,
-    },
-    {
-        'rose-pine/neovim',
-        name = 'rose-pine', -- Optional name to avoid using a full path
-        config = function()
-            require('rose-pine').setup {
-                variant = 'moon', -- Options: "main", "moon", "dawn"
-                dark_variant = 'moon', -- Variant to use in dark mode
-            }
-            -- vim.cmd("colorscheme rose-pine")
         end,
     },
 }
