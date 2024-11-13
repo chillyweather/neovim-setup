@@ -2,7 +2,7 @@ return {
     {
         'zaldih/themery.nvim',
         lazy = false, -- Load during startup since it's a colorscheme manager
-        priority = 1000, -- Load early
+        priority = 1000,
         config = function()
             require('themery').setup {
                 -- Define your list of themes
