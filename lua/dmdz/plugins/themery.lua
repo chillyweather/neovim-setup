@@ -23,7 +23,6 @@ return {
                         name = 'NordFox',
                         colorscheme = 'nordfox',
                     },
-
                     {
                         name = 'Catppuccin Frappe',
                         colorscheme = 'catppuccin-frappe',
@@ -51,8 +50,8 @@ return {
                         colorscheme = 'kanagawa-wave',
                     },
                     {
-                        name = 'Chiily Weather',
-                        colorscheme = 'chilly-weather',
+                        name = 'luca',
+                        colorscheme = 'luca',
                     },
                 },
 
@@ -98,7 +97,7 @@ return {
             'gregsexton/Atom',
             'projekt0n/github-nvim-theme',
             'EdenEast/nightfox.nvim',
-            'chillyweather/chilly-weather-theme',
+            'chillyweather/luca.vim',
             -- Add other theme plugins as needed
         },
     },
