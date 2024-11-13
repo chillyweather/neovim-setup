@@ -50,6 +50,10 @@ return {
                         name = 'Kanagawa',
                         colorscheme = 'kanagawa-wave',
                     },
+                    {
+                        name = 'Chiily Weather',
+                        colorscheme = 'chilly-weather',
+                    },
                 },
 
                 -- Theme switching settings
@@ -94,6 +98,7 @@ return {
             'gregsexton/Atom',
             'projekt0n/github-nvim-theme',
             'EdenEast/nightfox.nvim',
+            'chillyweather/chilly-weather-theme',
             -- Add other theme plugins as needed
         },
     },
