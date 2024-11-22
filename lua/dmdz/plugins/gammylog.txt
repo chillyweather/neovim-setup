@@ -1,0 +1,1 @@
+﻿2024-11-20 21:07:11.813 FATAL [20268] [Vidmode::Vidmode@59] Invalid gamma ramp size

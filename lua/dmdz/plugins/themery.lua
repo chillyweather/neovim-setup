@@ -24,6 +24,10 @@ return {
                         colorscheme = 'nordfox',
                     },
                     {
+                        name = 'Nord',
+                        colorscheme = 'nord',
+                    },
+                    {
                         name = 'Catppuccin Frappe',
                         colorscheme = 'catppuccin-frappe',
                     },
@@ -98,6 +102,7 @@ return {
             'shaunsingh/nord.nvim',
             'rebelot/kanagawa.nvim',
             'raphamorim/lucario',
+            'nordtheme/vim',
             'gregsexton/Atom',
             'projekt0n/github-nvim-theme',
             'EdenEast/nightfox.nvim',
