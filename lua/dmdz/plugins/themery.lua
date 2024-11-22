@@ -37,6 +37,10 @@ return {
                         style = 'storm',
                     },
                     {
+                        name = 'NightFox',
+                        colorscheme = 'nightfox',
+                    },
+                    {
                         name = 'Tokyonight Night',
                         colorscheme = 'tokyonight-night',
                         style = 'night',
