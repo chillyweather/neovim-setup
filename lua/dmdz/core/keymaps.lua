@@ -24,3 +24,5 @@ keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' }) 
 keymap.set('n', '<leader>se', '<C-w>=', { desc = 'Make splits equal size' }) -- make split windows equal width & height
 keymap.set('n', '<leader>sx', '<cmd>close<CR>', { desc = 'Close current split' }) -- close current split window
 keymap.set('n', '<leader>tt', '<cmd>Themery<CR>', { desc = 'Open Themery' }) -- close current split window
+
+keymap.set('n', '<leader>rm', 'gg"_dG', { noremap = true, silent = true, desc = 'Delete all content without copying' })
