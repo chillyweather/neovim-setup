@@ -58,6 +58,11 @@ return {
                         colorscheme = 'kanagawa-wave',
                     },
                     {
+                        name = 'sonokai',
+                        colorscheme = 'sonokai',
+                        style = 'atlantis',
+                    },
+                    {
                         name = 'luca',
                         colorscheme = 'luca',
                     },
@@ -106,6 +111,7 @@ return {
             'gregsexton/Atom',
             'projekt0n/github-nvim-theme',
             'EdenEast/nightfox.nvim',
+            'sainnhe/sonokai',
             'chillyweather/luca.vim',
             -- Add other theme plugins as needed
         },

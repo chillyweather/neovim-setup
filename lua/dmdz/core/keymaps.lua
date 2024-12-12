@@ -3,6 +3,15 @@ vim.g.mapleader = ' '
 
 local keymap = vim.keymap -- for conciseness
 
+---------------- Navigation remap ------------------
+-- Remap k to gk and j to gj
+keymap.set('n', 'k', 'gk', { noremap = true })
+keymap.set('n', 'j', 'gj', { noremap = true })
+
+-- Reverse mapping: gk to k and gj to j
+keymap.set('n', 'gk', 'k', { noremap = true })
+keymap.set('n', 'gj', 'j', { noremap = true })
+
 ---------------- General Keymaps -------------------
 
 -- use jk to exit insert mode
@@ -24,5 +33,6 @@ keymap.set('n', '<leader>sh', '<C-w>s', { desc = 'Split window horizontally' }) 
 keymap.set('n', '<leader>se', '<C-w>=', { desc = 'Make splits equal size' }) -- make split windows equal width & height
 keymap.set('n', '<leader>sx', '<cmd>close<CR>', { desc = 'Close current split' }) -- close current split window
 keymap.set('n', '<leader>tt', '<cmd>Themery<CR>', { desc = 'Open Themery' }) -- close current split window
+keymap.set('n', '<leader>ll', '<cmd>Lazy<CR>', { desc = 'Open Lazy' }) -- close current split window
 
 keymap.set('n', '<leader>rm', 'gg"_dG', { noremap = true, silent = true, desc = 'Delete all content without copying' })
