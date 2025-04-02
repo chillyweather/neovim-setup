@@ -1,26 +1,42 @@
 return {
     'nvimtools/none-ls.nvim',
+    dependencies = {
+        'nvimtools/none-ls-extras.nvim', -- Add required dependency [1][3]
+    },
     config = function()
         local null_ls = require 'null-ls'
 
-        -- Setup null-ls for Go
         null_ls.setup {
             sources = {
-                -- Formatter for Go
-                null_ls.builtins.formatting.gofmt, -- Standard gofmt
+                -- Existing Go sources
+                null_ls.builtins.formatting.gofmt,
+                null_ls.builtins.formatting.goimports,
+                null_ls.builtins.diagnostics.golangci_lint,
 
-                -- You can use goimports as an alternative:
-                null_ls.builtins.formatting.goimports, -- Adds missing imports & formats
-
-                -- Linter for Go
-                null_ls.builtins.diagnostics.golangci_lint, -- Golangci-lint for linting
+                -- New ESLint configuration
+                require('none-ls.diagnostics.eslint_d').with {
+                    condition = function(utils)
+                        return utils.root_has_file 'eslint.config.js' -- ESLint v9+ config
+                            or utils.root_has_file '.eslintrc' -- Legacy config formats
+                            or utils.root_has_file '.eslintrc.json'
+                            or utils.root_has_file '.eslintrc.yml'
+                    end,
+                },
             },
 
-            -- Optional: Automatically format Go files on save
             on_attach = function(client)
                 if client.server_capabilities.documentFormattingProvider then
+                    -- Preserve Go-specific formatting
                     vim.api.nvim_create_autocmd('BufWritePre', {
                         pattern = '*.go',
+                        callback = function()
+                            vim.lsp.buf.format { async = false }
+                        end,
+                    })
+
+                    -- Optional: Add formatting for other file types
+                    vim.api.nvim_create_autocmd('BufWritePre', {
+                        pattern = { '*.js', '*.ts', '*.jsx', '*.tsx' },
                         callback = function()
                             vim.lsp.buf.format { async = false }
                         end,
