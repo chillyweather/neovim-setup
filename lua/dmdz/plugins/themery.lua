@@ -63,8 +63,8 @@ return {
                         style = 'atlantis',
                     },
                     {
-                        name = 'luca',
-                        colorscheme = 'luca',
+                        name = 'Lucka',
+                        colorscheme = 'lucka',
                     },
                 },
 
